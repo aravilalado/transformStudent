@@ -28,18 +28,54 @@
 			#roll div{
 				width: 200px;
 				height: 200px;
+				position: absolute;
 			}
 			#roll div:first-of-type{
 				background-color: red;
+				bottom: 723px;
 			}
 			#roll div:nth-of-type(2){
 				background-color: yellow;
+				bottom: 723px;
+				right: 756px;
 				}
 			#roll div:nth-of-type(3){
 				background-color: blue;
+				bottom: 523px;
 			}
 			#roll div:last-of-type{
  				background-color: green;
+				right: 756px;
+				bottom: 523px;
+			}
+
+
+
+			#roll:hover div:first-of-type{
+				background-color: red;
+				bottom: 723px;
+				transform-origin: top left;
+				transform: skew(-45deg, 0deg)
+			}
+			#roll:hover div:nth-of-type(2){
+				background-color: yellow;
+				bottom: 723px;
+				right: 756px;
+				transform-origin: top left;
+				transform: skew(45deg, 0deg) 
+				}
+			#roll:hover div:nth-of-type(3){
+				background-color: blue;
+				bottom: 523px;
+				transform-origin: bottom right;
+				transform: skew(45deg, 0deg)
+			}
+			#roll:hover div:last-of-type{
+ 				background-color: green;
+				right: 756px;
+				bottom: 523px;
+				transform-origin: bottom right;
+				transform: skew(-45deg, 0deg)
 			}
 			p {
 				text-align: center;

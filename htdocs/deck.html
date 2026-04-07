@@ -9,7 +9,6 @@
     <meta name="revised" content="12/04/2022">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
-			/*use rotation from the parent box to rotate the cards and when hovered, it changes color*/
 
 			* {
 				box-sizing: border-box;
@@ -31,32 +30,46 @@
 				padding: 5px;
 				font-weight: bold;
 				position: absolute;
+				transform-origin: bottom left;
+				transition:all 1.5s;
+				bottom: 540px;
+				right:775px;
 			}
 			#deck div:hover{
 				border: 3px solid yellow;
-				transform-origin: bottom;
-				transform: rotate(3deg);
 				
 			}
+			#deck:hover div:first-child{
+				transform: rotate(-25deg)
+			}
+			#deck:hover div:nth-child(2){
+				transform: rotate(-15deg)
+			}
+			#deck:hover div:nth-child(3){
+				transform: rotate(-5deg)
+			}
+			#deck:hover div:nth-child(4){
+				transform: rotate(5deg)
+			}
+			#deck:hover div:nth-child(5){
+				transform: rotate(15deg)
+			}
+
+
 			#deck div:first-child:hover{
 				background-color: yellow;
-				z-index: 1;
 			}
 			#deck div:nth-child(2):hover{
 				background-color: orange;
-				z-index: 2;
 			}
 			#deck div:nth-child(3):hover{
 				background-color: green;
-				z-index: 3;
 			}
 			#deck div:nth-child(4):hover{
 				background-color: blue;
-				z-index: 4;
 			}
 			#deck div:nth-child(5):hover{
 				background-color: violet;
-				z-index: 5;
 			}
 			a {
 				text-decoration: none;
